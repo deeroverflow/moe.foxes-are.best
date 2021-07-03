@@ -43,7 +43,7 @@ html, body{
     margin-right: 0!important;
 }
 .button:active img{
-    transform: scale3d(0.85,0.85,0.85);
+    transform: scale3d(0.82,0.82,0.82);
 }
 .button:first-child::after{
     content: "Start";
@@ -55,12 +55,12 @@ html, body{
     content: "Edge"!important;
 }
 .button:nth-child(4)::after{
-    content: "Explorer"!important;
+    content: "File Explorer"!important;
 }
 .button:nth-child(5)::after{
     content: "Settings"!important;
 }
-.button:nth-child(5)::after{
+.button:nth-child(6)::after{
     content: "Tidal"!important;
 }
 .button::after{
@@ -85,7 +85,7 @@ html, body{
 .button img{
     width: 24px;
     height: 24px;
-    transition: transform .2s cubic-bezier(.48,.63,0,1.25);
+    transition: transform .2s cubic-bezier(.48,.63,0,1);
     transition-delay: .12s;
 }
 .button:active img{
