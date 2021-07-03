@@ -1,0 +1,94 @@
+html, body{
+    font-family: "Segoe UI";
+    color: white;
+    font-size: 12px;
+    font-style: thin;
+    text-rendering: auto;
+    margin: 0;
+    padding: 0;
+    background: url('/img/background.jpg');
+    background-size: viewport;
+    overflow: hidden;
+}
+
+.flex-taskbar-container{
+    height: 48px;
+    width: 100vw;
+    bottom: -44px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(150,150,150,0.05)!important;
+    backdrop-filter: blur(150px);
+    transition: bottom .5s cubic-bezier(.7,0,.2,1); /* cubic-bezier(.4,0,.3,1);*/
+    transition-delay: .3s;
+}
+.flex-taskbar-container:hover{
+    bottom: 0px;
+    transition: bottom .21s cubic-bezier(.3,0,0,1);
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+    height: 41px;
+    width: 40px;
+    border-radius: 4px;
+    transition: background .125s ease, box-shadow .125s ease;
+}
+.button:last-child{
+    margin-right: 0!important;
+}
+.button:active img{
+    transform: scale3d(0.85,0.85,0.85);
+}
+.button:first-child::after{
+    content: "Start";
+}
+.button:nth-child(2)::after{
+    content: "Discord"!important;
+}
+.button:nth-child(3)::after{
+    content: "Edge"!important;
+}
+.button:nth-child(4)::after{
+    content: "Explorer"!important;
+}
+.button:nth-child(5)::after{
+    content: "Settings"!important;
+}
+.button:nth-child(5)::after{
+    content: "Tidal"!important;
+}
+.button::after{
+    position: absolute;
+    padding: 6px 12px;
+    background: #2a2a2a;
+    top: -15px;
+    opacity: 0;
+    transition: all .3s cubic-bezier(0,.68,.16,.95);
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgb(50,50,50,0.15), 0 1px 5px 2px rgba(0,0,0,0.5);
+}
+.button:hover::after{
+    opacity: 1;
+    top: -35px;
+    transition-delay: .8s;
+}
+.button:hover{
+    background: rgba(150,150,150,0.05);
+    box-shadow: 0 0 0 1px rgba(150,150,150,0.09);
+}
+.button img{
+    width: 24px;
+    height: 24px;
+    transition: transform .2s cubic-bezier(.48,.63,0,1.25);
+    transition-delay: .12s;
+}
+.button:active img{
+    transition-delay: 0s;
+    transition: transform .12s cubic-bezier(.48,.63,0,1)!important;
+}
